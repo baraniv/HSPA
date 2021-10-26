@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "hspa-angdeal": {
+      "hosting": {
+        "my-first-app": [
+          "hspa-angdeal"
+        ]
+      }
+    }
+  }
+}

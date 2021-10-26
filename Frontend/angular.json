@@ -13,7 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": ["alertifyjs"],
+            "allowedCommonJsDependencies": [
+              "alertifyjs"
+            ],
             "outputPath": "dist/my-first-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -123,6 +125,10 @@
               "devServerTarget": "my-first-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
