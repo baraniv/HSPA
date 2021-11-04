@@ -45,7 +45,7 @@ namespace WebAPI.Controllers
         private string CreateJWT(User user)
         {
             // get the key from appsetting.json...
-            var secretKey = configuration.GetSection("AppSetings:Key").Value;
+            var secretKey = configuration.GetSection("AppSettings:Key").Value;
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
 
             var claims = new Claim[]{

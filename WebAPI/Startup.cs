@@ -40,7 +40,7 @@ namespace WebAPI
             services.AddScoped<IUnitOfWork,UnitOfWork>();
 
             // get the key from appsetting.json...
-            var secretKey = Configuration.GetSection("AppSetings:Key").Value;
+            var secretKey = Configuration.GetSection("AppSettings:Key").Value;
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(opt => {
